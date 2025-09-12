@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>User Task Page</h2>
+
+	<font color="green" th:text=${msg}> </font>
+	<form th:action="@{/saveTask}" th:object="${taskData}" method="POST">
+		<table>
+			<tr>
+				<td>Task Name</td>
+				<td><input type="text" th:field="*{taskName}" /></td>
+			</tr>
+			<tr>
+				<td>Task Date</td>
+				<td><input type="date" th:field="*{taskDate}" /></td>
+			</tr>
+			<tr>
+				<td>Task Time</td>
+				<td><input type="time" th:field="*{taskTime}" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Create Task"></td>
+			</tr>
+			
+		</table>
+	</form>
+</body>
+</html>

@@ -3,6 +3,7 @@ package in.mane.binding;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+// Binding class 
 public class Product {
 	
 	@NotNull(message = "Id is required")

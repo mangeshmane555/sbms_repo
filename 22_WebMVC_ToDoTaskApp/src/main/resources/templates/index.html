@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>Welcome to Home Page</h2>
+
+	<font color="green" th:text=${msg}> </font>
+	<font color="green" th:text=${taskMsg}> </font>
+	
+	<div>
+		<a href="/registerForm"> New User Registration </a>
+	</div>
+	<div>
+		<a href="/loginForm"> User Login </a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>User Registration Page</h2>
+
+	<font color="green" th:text=${msg}> </font>
+	<form th:action="@{/registerUser}" th:object="${userData}" method="POST">
+
+		<table>
+			<tr>
+				<td>User Name</td>
+				<td><input type="text" th:field="*{userName}" /></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" th:field="*{userEmail}" /></td>
+			</tr>
+			<tr>
+				<td><label>Gender:</label></td>
+				<td>
+					<div>
+						<input type="radio" id="male" th:field="*{userGender}"
+							value="Male" /> <label for="male">Male</label>
+					
+						<input type="radio" id="female" th:field="*{userGender}"
+							value="Female" /> <label for="female">Female</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td><label>Phone No. :</label></td>
+				<td><input type="tel" id="userPhno" th:field="*{userPhno}" /></td>
+			</tr>
+			<tr>
+				<td><label>Password :</label></td>
+				<td><input type="text" th:field="*{userPwd}" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

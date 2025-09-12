@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>Login Page</h2>
+
+	<section>
+
+		<font color="green" th:text=${msg}> </font>
+	</section>
+	
+	
+	<section>
+	
+	<form th:action="@{/loginUser}" th:object="${loginData}" method="POST">
+		<table>
+			<tr>
+				<td><label>User Name :</label></td>
+				<td><input type="text" th:field="*{userEmail}" /></td>
+			</tr>
+			<tr>
+				<td><label> Password : </label></td>
+				<td><input type="text" th:field="*{userPwd}" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Login"></td>
+			</tr>
+
+		</table>
+	</form>
+	</section>
+	
+	
+	
+</body>
+</html>
