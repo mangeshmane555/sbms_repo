@@ -22,8 +22,8 @@ public class UserTaskEntity {
 	private String taskName;
 	private LocalDate taskDate;
 	private LocalTime taskTime;
-	
 	//
+	//If you try to return either entity from a REST controller, the JSON serializer goes into infinite recursion:
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private UserRegistrationEntity userReg;

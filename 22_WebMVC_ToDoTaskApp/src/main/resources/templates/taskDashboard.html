@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Task List</title>
+<head>
+<title>Events List</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 2rem;
+}
+
+table {
+	border-collapse: collapse;
+	width: 60%;
+}
+
+th, td {
+	border: 1px solid #ccc;
+	padding: 8px 12px;
+	text-align: left;
+}
+
+th {
+	background-color: #f4f4f4;
+}
+</style>
+</head>
+</head>
+<body>
+	<h2>Task Dashboard Page</h2>
+	<a th:href="@{/}">Home</a> <a href="/userLogout"> Logout </a> &nbsp  <button onclick="history.back()">Go Back</button> 
+
+	<font color="green" th:text=${msg}> </font>
+	<br>
+	<br>
+
+	<!-- Task List -->
+	<h2 style="color: purple;">User Task List</h2> <br>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Date</th>
+				<th>Time</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="task : ${tasks}">
+				<td th:text="${task.taskId}"></td>
+				<td th:text="${task.taskName}"></td>
+				<td th:text="${#temporals.format(task.taskDate, 'yyyy-MM-dd')}"></td>
+				<td th:text="${#temporals.format(task.taskTime, 'HH:mm')}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
