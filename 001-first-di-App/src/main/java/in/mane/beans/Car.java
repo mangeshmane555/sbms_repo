@@ -24,6 +24,7 @@ public class Car {
 	
 
 	public void drive() {
+		// Accessing implemented class methods
 		int status = eng.start();
 		if(status >=1) {
 			System.out.println("Journey Started..");
