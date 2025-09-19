@@ -73,8 +73,10 @@ public class MakeMyTripService {
 	public Ticket getTicketInfo(String ticketId) {
 
 		WebClient webClient = WebClient.create();
-		Ticket ticket = webClient.get().uri(IRCTC_GET_TICKET_URL, ticketId) // Endpoint Url
-				.accept(MediaType.APPLICATION_JSON).retrieve() // Take response from response body
+		Ticket ticket = webClient.get()
+				.uri(IRCTC_GET_TICKET_URL, ticketId) // Endpoint Url
+				.accept(MediaType.APPLICATION_JSON)
+				.retrieve() // Take response from response body
 				.bodyToMono(Ticket.class) // Bind response body data to java object
 				.block(); // For Synchronous call
 
@@ -90,7 +92,6 @@ public class MakeMyTripService {
 		WebClient webClient = WebClient.create();
 		Ticket ticket = webClient.post()
 				.uri(IRCTC_BOOK_TICKET_URL, passenger_request)
-				.accept(MediaType.APPLICATION_JSON)
 				.body(BodyInserters.fromValue(passenger_request))
 				.header("content-type", "application/json")
 				.accept(MediaType.APPLICATION_JSON)
