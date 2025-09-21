@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: 33_SB_MS_Greet_Api
+#For Admin server
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111
+        
+server:
+  port: 9091
+# For default Service registry (Eureka Server) for apis use port = 8761
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone :http://localhost/8761/eureka
+
+#For Enpoints Actuators 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        

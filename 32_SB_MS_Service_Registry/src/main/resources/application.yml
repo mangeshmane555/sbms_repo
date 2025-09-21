@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: 32_SB_MS_Service_Registry
+#Used the default port as 8761 for Eureka server to auto register the apis 
+server:
+  port: 8761
+
+#To register currrent project as only eureka server but not instance
+eureka:
+  client:
+    register-with-eureka: false
