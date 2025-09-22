@@ -1,5 +1,5 @@
 spring:
   application:
-    name: 32_SB_MS_Admin_Server
+    name: ADMIN-SERVER
 server:
   port: 1111
