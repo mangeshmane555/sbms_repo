@@ -6,9 +6,11 @@ spring:
     admin:
       client:
         url: http://localhost:1111
-        
+
+#Commenting the server port for dynamic port insert in Load Balancing        
 server:
   port: 9091
+
 # For default Service registry (Eureka Server) for apis use port = 8761
 #eureka:
 #  client:
