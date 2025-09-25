@@ -1,0 +1,8 @@
+spring:
+#Same Name as .yml file name in git config repo
+  application:
+    name: welcome 
+  config:
+    import: optional:configserver:http://localhost:8080
+server:
+  port: 9090
