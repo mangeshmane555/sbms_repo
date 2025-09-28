@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: 41_Spring_Security_JDBC_Auth_App
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sbms27
+    username: root
+    password: wolf
+  jpa:
+    show-sql: true
