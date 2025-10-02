@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: 47_Spring_Batch_App
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/batchdemo
+    username: root
+    password: wolf
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  batch:
+    jdbc:
+      initialize-schema: always #always drop and recreate on every startup
